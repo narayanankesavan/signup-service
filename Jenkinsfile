@@ -5,6 +5,7 @@ pipeline {
     dockerImage = 'signup-service'
     containername = 'signup-service'
     MAIL_TO ='kesavannarayanan@gmail.com,lobomalcon@gmail.com,sangramsahutech@gmail.com,anshulv1401@gmail.com,akshit.baunthy@gmail.com'
+    PORT = 43439
   }
   agent {label 'backendapi-java'}
   stages {
@@ -57,7 +58,7 @@ pipeline {
       steps{
 	  script {
 		sh "pwd"
-		sh "sudo docker run -it -d --name ${containername} -p 43439:43439 ${registry}:${dockerImage}"
+		  sh "sudo docker run -it -d --name ${containername} -p ${PORT}:${PORT} ${registry}:${dockerImage}"
 		}
       }
     }
