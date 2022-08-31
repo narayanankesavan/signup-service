@@ -1,5 +1,5 @@
 FROM openjdk:17-oracle
-EXPOSE 2222
+EXPOSE 43439
 
 COPY ./target/signup-service-0.0.1-SNAPSHOT.jar /usr/app/
 
