@@ -57,7 +57,7 @@ pipeline {
       steps{
 	  script {
 		sh "pwd"
-		sh "sudo docker run -it -d --name ${containername} -p 2222:2222 ${registry}:${dockerImage}"
+		sh "sudo docker run -it -d --name ${containername} -p 43439:43439 ${registry}:${dockerImage}"
 		}
       }
     }
